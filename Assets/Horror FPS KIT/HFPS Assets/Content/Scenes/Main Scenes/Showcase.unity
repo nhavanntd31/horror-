@@ -3821,7 +3821,7 @@ PrefabInstance:
     - target: {fileID: 1484840049536936772, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6123729
+      value: 0.612373
       objectReference: {fileID: 0}
     - target: {fileID: 1484840049536936772, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
@@ -3831,7 +3831,7 @@ PrefabInstance:
     - target: {fileID: 1484840049536936772, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.3535525
+      value: -0.35355252
       objectReference: {fileID: 0}
     - target: {fileID: 1484840049536936772, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
@@ -3871,7 +3871,7 @@ PrefabInstance:
     - target: {fileID: 8197258102864391593, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6123729
+      value: 0.612373
       objectReference: {fileID: 0}
     - target: {fileID: 8197258102864391593, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
@@ -3881,7 +3881,7 @@ PrefabInstance:
     - target: {fileID: 8197258102864391593, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.3535525
+      value: -0.35355252
       objectReference: {fileID: 0}
     - target: {fileID: 8197258102864391593, guid: 2a92e66ff7f63504a827ef071ea652c3,
         type: 3}
@@ -94971,7 +94971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f624d677b0a18e74ab57c2f35741f825, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lightType: 1
+  lightType: 2
   lightObj: {fileID: 8498653061026974395}
   meshRenderer: {fileID: 0}
   electricity: {fileID: 0}
