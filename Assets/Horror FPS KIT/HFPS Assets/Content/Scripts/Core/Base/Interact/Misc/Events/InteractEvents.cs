@@ -2,7 +2,7 @@
 using UnityEngine.Events;
 using ThunderWire.Utility;
 using HFPS.Player;
-
+using System.Collections;
 namespace HFPS.Systems
 {
     public class InteractEvents : MonoBehaviour
@@ -23,13 +23,13 @@ namespace HFPS.Systems
 
         public UnityEvent InteractEvent;
         public UnityEvent InteractBackEvent;
+        public UnityEvent SoundCompleteEvent;
 
         public bool CancelExamine;
         public bool WaitForNextSound;
 
         public AudioClip InteractSound;
         public float InteractVolume = 1f;
-
         private AudioSource sound;
         private bool isInteracted;
 
@@ -51,6 +51,11 @@ namespace HFPS.Systems
         {
             UseObject();
         }
+        private IEnumerator InvokeSoundComplete()
+        {
+            yield return new WaitForSeconds(InteractSound.length);
+            SoundCompleteEvent?.Invoke();
+        }
 
         public void UseObject()
         {
@@ -66,7 +71,9 @@ namespace HFPS.Systems
                     {
                         InteractObject.GetComponent<Animation>()[AnimationName].speed = AnimationSpeed;
                         InteractObject.GetComponent<Animation>().Play(AnimationName);
-                        if (InteractSound) { AudioSource.PlayClipAtPoint(InteractSound, transform.position, InteractVolume); }
+                        if (InteractSound) { 
+                            AudioSource.PlayClipAtPoint(InteractSound, transform.position, InteractVolume);
+                        }
                         isInteracted = true;
                     }
                 }
@@ -142,6 +149,7 @@ namespace HFPS.Systems
             {
                 examineManager.CancelExamine();
             }
+            StartCoroutine(InvokeSoundComplete());
         }
     }
 }

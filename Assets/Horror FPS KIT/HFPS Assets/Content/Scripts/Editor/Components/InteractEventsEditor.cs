@@ -17,6 +17,7 @@ namespace HFPS.Editors
 
         private SerializedProperty m_InteractEvent;
         private SerializedProperty m_InteractBackEvent;
+        private SerializedProperty m_SoundCompleteEvent;
 
         private SerializedProperty m_CancelExamine;
         private SerializedProperty m_WaitForNextSound;
@@ -37,6 +38,7 @@ namespace HFPS.Editors
 
             m_InteractEvent = serializedObject.FindProperty("InteractEvent");
             m_InteractBackEvent = serializedObject.FindProperty("InteractBackEvent");
+            m_SoundCompleteEvent = serializedObject.FindProperty("SoundCompleteEvent");
 
             m_CancelExamine = serializedObject.FindProperty("CancelExamine");
             m_WaitForNextSound = serializedObject.FindProperty("WaitForNextSound");
@@ -80,6 +82,7 @@ namespace HFPS.Editors
                 {
                     EditorGUILayout.PropertyField(m_InteractEvent);
                     EditorGUILayout.PropertyField(m_InteractBackEvent);
+                    EditorGUILayout.PropertyField(m_SoundCompleteEvent);
                 }
             }
 

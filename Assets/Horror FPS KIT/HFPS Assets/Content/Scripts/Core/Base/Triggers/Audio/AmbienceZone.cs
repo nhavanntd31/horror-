@@ -7,24 +7,31 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json.Linq;
 using UnityEngine;
+using HFPS.Player;
+using HFPS.Systems;
 
 namespace HFPS.Systems
 {
     public class AmbienceZone : MonoBehaviour, ISaveable
     {
         private AudioSource AmbienceSource;
-
+        private PlayerController playerController;
+        
         public AudioClip Ambience;
         public float TargetVolume = 1f;
         public float FadeSpeed;
-
+        public Electricity electricity;
+        public bool darkTrigger;
         private bool triggerEnter;
         private bool fadedOut;
         private bool fadedIn;
 
+        public Vector2 lerpLook;
+
         void Awake()
         {
             AmbienceSource = ScriptManager.Instance.AmbienceSource;
+            playerController = PlayerController.Instance;
         }
 
         void Update()
@@ -58,6 +65,7 @@ namespace HFPS.Systems
                         fadedIn = true;
                     }
                 }
+          
             }
         }
 
@@ -69,6 +77,18 @@ namespace HFPS.Systems
                 fadedOut = false;
                 triggerEnter = true;
                 FindObjectsOfType<AmbienceZone>().Where(x => x != this).ToList().ForEach(x => x.triggerEnter = false);
+            }
+                  
+            if (darkTrigger)
+            {
+                if (!electricity.isPoweredOn)
+                {
+                    if (playerController != null)
+                    {
+                        Debug.Log(lerpLook);
+                        playerController.LerpPlayer(playerController.transform.position - playerController.transform.forward * 2, playerController.getBackLook(), true);
+                    }
+                }
             }
         }
 

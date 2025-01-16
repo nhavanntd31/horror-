@@ -1204,6 +1204,10 @@ namespace HFPS.Player
                 scriptManager.GetComponent<MouseLook>().LerpLook(look, autoMoveSettings.globalAutoLook, true);
             }
         }
+        public Vector2 getBackLook()
+        {
+            return new Vector2(-transform.forward.x, -transform.forward.z);
+        }
 
         IEnumerator MovePlayer(Vector3 pos, float speed, bool isLadder, bool unlockLook = false)
         {
@@ -1270,5 +1274,6 @@ namespace HFPS.Player
             Vector3 pos = transform.position + CharacterControl.center - new Vector3(0, (CharacterControl.height / 2f) + groundCheckOffset, 0);
             Gizmos.DrawWireSphere(pos, groundCheckRadius);
         }
+        
     }
 }

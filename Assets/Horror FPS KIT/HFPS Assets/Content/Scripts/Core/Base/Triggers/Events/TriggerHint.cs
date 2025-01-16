@@ -27,6 +27,8 @@ namespace HFPS.Systems
         private bool timedShow;
         private bool isShown;
 
+        public bool infiniteHint;
+
         void Awake()
         {
             if (InputHandler.HasReference)
