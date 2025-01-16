@@ -18398,79 +18398,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 981037742}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &981542838
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 981542841}
-  - component: {fileID: 981542840}
-  - component: {fileID: 981542839}
-  m_Layer: 2
-  m_Name: ObjectiveTrigger_01
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &981542839
+--- !u!114 &981542839 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 5811851097594470588, guid: afb31079e5226f241b1799d043b9a758,
+    type: 3}
+  m_PrefabInstance: {fileID: 1488697655306793705}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981542838}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d649255b09b47ae459d171a3fbcbc4a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerType: 0
-  objective: 0
-  objectivesID: 00000000
-  showTime: 3
-  preComplete: 0
-  newWhenContains: 0
-  isTriggered: 0
---- !u!65 &981542840
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981542838}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 4.884962, z: 5.1459827}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!4 &981542841
+--- !u!4 &981542841 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+    type: 3}
+  m_PrefabInstance: {fileID: 1488697655306793705}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981542838}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.097, y: 2.501, z: 202.407}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 9600535}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &982140989 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114380822965663110, guid: 28d12f4cb5479f346a8376e7f4cba6a3,
@@ -28549,6 +28494,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: IC_OilBottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 8517838539651564138, guid: 3f790a1927fda0b4f9b8af9565545320,
+        type: 3}
+      propertyPath: itemTitle
+      value: Oil Bottle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -47270,6 +47220,74 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &1488697655306793705
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9600535}
+    m_Modifications:
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.097
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.501
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 202.407
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 72287514080852015, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2960728317385167898, guid: afb31079e5226f241b1799d043b9a758,
+        type: 3}
+      propertyPath: m_Name
+      value: ObjectiveTrigger_01
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: afb31079e5226f241b1799d043b9a758, type: 3}
 --- !u!1 &1515351275029187171
 GameObject:
   m_ObjectHideFlags: 0
